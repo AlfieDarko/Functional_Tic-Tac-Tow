@@ -24,7 +24,10 @@ describe('Board', function() {
   });
 
   describe('.hasAnybodyWon()', function() {
-    it('returns ', function() {});
+    it('returns true if there is a winner', function() {
+      subject.grid = ["X", "X", "X", "O", "O", "", "", "", ""]
+      expect(subject.hasAnybodyWon()).to.eql(true)
+    });
   });
 });
 
