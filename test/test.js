@@ -29,17 +29,15 @@ describe('Board', function() {
       subject = new Board()
     });
 
-    it('returns true if there is a winner', function() {
+    it('returns true if there is a winner VIA 3xO in row1', function() {
       grid = ["O", "O", "O", "X", "O", "", "", "", ""]
       expect(subject.hasAnybodyWon(grid)).to.eql(true)
     });
+
+    it('returns true if there is a winner VIA 3xX in row1', function() {
+      grid = ["X", "X", "X", "X", "O", "O", "O", "", ""]
+      expect(subject.hasAnybodyWon(grid)).to.eql(true)
+    });
+
   });
 });
-
-// board will have a grid with 9 elements
-// has someone won?
-// check if row -> 012/345/678
-// check if col ->036/147/258
-// check if 048/246
-
-// if not then draw
