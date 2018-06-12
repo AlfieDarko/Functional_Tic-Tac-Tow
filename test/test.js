@@ -5,6 +5,7 @@ const Board = require('../lib/board.js');
 
 describe('Board', function() {
   let subject
+  let grid
   describe('.grid', function() {
     beforeEach(function() {
       subject = new Board()
@@ -29,8 +30,8 @@ describe('Board', function() {
     });
 
     it('returns true if there is a winner', function() {
-      subject.grid = ["O", "O", "O", "X", "O", "", "", "", ""]
-      expect(subject.hasAnybodyWon(subject.grid)).to.eql(true)
+      grid = ["O", "O", "O", "X", "O", "", "", "", ""]
+      expect(subject.hasAnybodyWon(grid)).to.eql(true)
     });
   });
 });
