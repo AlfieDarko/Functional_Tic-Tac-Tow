@@ -66,12 +66,12 @@ describe('Board', function() {
       subject = new Board()
     });
 
-    it('returns an array of indexes of the unfilled grid', function() {
+    it('returns the correct array of indexes of a single unfilled grid', function() {
       grid = ["X", "O", "X", "X", "X", "O", "O", "X", ""]
       expect(subject.availableSquares(grid)).to.eql([8])
     });
 
-    it('returns an array of indexes of the unfilled grid', function() {
+    it('returns the correct array of indexes of the multiple unfilled grids', function() {
       grid = ["", "O", "", "", "X", "", "O", "X", ""]
       expect(subject.availableSquares(grid)).to.eql([0, 2, 3, 5, 8])
     });
