@@ -106,5 +106,10 @@ describe('Board', function() {
       grid = ["X", "", "", "", "", "", "", "", ""]
       expect(subject.nextPlayer(grid)).to.eql("O")
     });
+
+    it('returns player O if the grid has one last move left ', function() {
+      grid = ["X", "O", "X", "O", "X", "X", "O", "X", ""]
+      expect(subject.nextPlayer(grid)).to.eql("O")
+    });
   });
 });
