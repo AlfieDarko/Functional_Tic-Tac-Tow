@@ -39,5 +39,11 @@ describe('Board', function() {
       expect(subject.hasAnybodyWon(grid)).to.eql(true)
     });
 
+    it('returns false if there is no winner', function() {
+      grid = ["X", "O", "X", "X", "X", "O", "O", "X", ""]
+      expect(subject.hasAnybodyWon(grid)).to.eql(false)
+    });
+
+
   });
 });
