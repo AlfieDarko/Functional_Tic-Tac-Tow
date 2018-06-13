@@ -44,6 +44,12 @@ describe('Board', function() {
       expect(subject.hasAnybodyWon(grid)).to.eql(false)
     });
 
+    it('returns false if there are no moves made ', function() {
+      grid = ["", "", "", "", "", "", "", "", ""]
+      expect(subject.hasAnybodyWon(grid)).to.eql(false)
+    });
+
+
 
   });
 });
