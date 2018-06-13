@@ -79,9 +79,18 @@ describe('Board', function() {
     it('returns correct array of indexes when all grids are unfilled', function() {
       grid = ["", "", "", "", "", "", "", "", ""]
       expect(subject.availableSquares(grid)).to.eql([0, 1, 2, 3, 4, 5, 6, 7, 8])
+    });
+  });
 
+  describe('.nextPlayer()', function() {
+    beforeEach(function() {
+      subject = new Board()
     });
 
+    it('returns the player X to make a move when moves are equal', function() {
+      grid = ["", "O", "", "", "X", "", "O", "X", ""]
+      expect(subject.nextPlayer(grid)).to.eql("X")
+    });
   });
 
 
