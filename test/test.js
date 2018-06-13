@@ -102,10 +102,9 @@ describe('Board', function() {
       expect(subject.nextPlayer(grid)).to.eql("X")
     });
 
-
-
-
+    it('returns player O if the grid is has one X ', function() {
+      grid = ["X", "", "", "", "", "", "", "", ""]
+      expect(subject.nextPlayer(grid)).to.eql("O")
+    });
   });
-
-
 });
