@@ -92,6 +92,16 @@ describe('Board', function() {
       expect(subject.nextPlayer(grid)).to.eql("X")
     });
 
+    it('returns the player O to make a move when X has more moves than O', function() {
+      grid = ["", "O", "", "", "X", "X", "O", "X", ""]
+      expect(subject.nextPlayer(grid)).to.eql("O")
+    });
+
+    it('returns player X if the grid is empty', function() {
+      grid = ["", "", "", "", "", "", "", "", ""]
+      expect(subject.nextPlayer(grid)).to.eql("X")
+    });
+
 
 
 
