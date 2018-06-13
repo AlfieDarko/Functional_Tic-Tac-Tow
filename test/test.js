@@ -71,6 +71,10 @@ describe('Board', function() {
       expect(subject.availableSquares(grid)).to.eql([8])
     });
 
+    it('returns an array of indexes of the unfilled grid', function() {
+      grid = ["", "O", "", "", "X", "", "O", "X", ""]
+      expect(subject.availableSquares(grid)).to.eql([0, 2, 3, 5, 8])
+    });
 
   });
 
