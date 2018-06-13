@@ -61,5 +61,18 @@ describe('Board', function() {
     });
   });
 
+  describe('.availableSquares()', function() {
+    beforeEach(function() {
+      subject = new Board()
+    });
+
+    it('returns an array of indexes of the unfilled grid', function() {
+      grid = ["X", "O", "X", "X", "X", "O", "O", "X", ""]
+
+      expect(subject.availableSquares(grid)).to.eql([8])
+    });
+
+  });
+
 
 });
