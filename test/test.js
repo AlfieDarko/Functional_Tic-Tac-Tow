@@ -48,8 +48,18 @@ describe('Board', function() {
       grid = ["", "", "", "", "", "", "", "", ""]
       expect(subject.hasAnybodyWon(grid)).to.eql(false)
     });
-
-
-
   });
+
+  describe('.draw()', function() {
+    beforeEach(function() {
+      subject = new Board()
+    });
+
+    it('returns true when all squares are filled and there is no winner', function() {
+      grid = ["X", "O", "X", "X", "X", "O", "O", "X", "O"]
+      expect(subject.draw(grid)).to.eql(true)
+    });
+  });
+
+
 });
