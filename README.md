@@ -47,13 +47,6 @@ Alternatively if you are using yarn then
 ```sh
 yarn test
 ```
-## Meta
-
-Alfie Darko – me@alfiedarko.co.uk
-
-Distributed under the MIT license. See ``LICENSE`` for more information.
-
-[https://github.com/AlfieDarko/Functional_Tic-Tac-Tow](https://github.com/AlfieDarko/)
 
 ## Contributing
 
@@ -62,3 +55,11 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+## Meta
+
+Alfie Darko – me@alfiedarko.co.uk
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
+
+[https://github.com/AlfieDarko/Functional_Tic-Tac-Tow](https://github.com/AlfieDarko/)
