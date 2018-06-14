@@ -28,7 +28,7 @@ Learning about functional programming principles is something that I will defini
 
 #### Shared state
 
-the grid and winning lines array currently live in what would be the constructor and I'm not sure if this violates the shared state principle since all the prototype functions can access it? I will read up more about what this actually means.
+The grid and winning lines array currently live in what would be the constructor and I'm not sure if this violates the shared state principle since all the prototype functions can access it? I will read up more about what this actually means.
 <br> I have to research whether these are strict rules or best practices. <br> <br> Is it the case that I create the same variable for every function that will use it therefore each function has its own depending on need and not sharing data from outside?
 
 ## Development setup
