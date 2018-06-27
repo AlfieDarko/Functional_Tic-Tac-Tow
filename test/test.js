@@ -32,21 +32,28 @@ describe("Board", function() {
 
     it("returns true if there is a winner VIA 3xO in row1", function() {
       grid = ["O", "O", "O", "X", "O", "", "", "", ""];
+      subject.findWinningLines(subject.grid)
       expect(subject.hasAnybodyWon(grid)).to.eql(true);
     });
 
     it("returns true if there is a winner VIA 3xX in row1", function() {
       grid = ["X", "X", "X", "X", "O", "O", "O", "", ""];
+      subject.findWinningLines(subject.grid)
+
       expect(subject.hasAnybodyWon(grid)).to.eql(true);
     });
 
     it("returns false if there is no winner", function() {
       grid = ["X", "O", "X", "X", "X", "O", "O", "X", ""];
+      subject.findWinningLines(subject.grid)
+
       expect(subject.hasAnybodyWon(grid)).to.eql(false);
     });
 
     it("returns false if there are no moves made ", function() {
       grid = ["", "", "", "", "", "", "", "", ""];
+      subject.findWinningLines(subject.grid)
+
       expect(subject.hasAnybodyWon(grid)).to.eql(false);
     });
   });
@@ -142,21 +149,22 @@ describe("Board", function() {
     });
 
     it('creates an multidimensional array of possible winnings lines for 3x3 grid', () => {
-      grid = [
+      winningLines = [
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
         [0, 3, 6],
         [1, 4, 7],
         [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
+        [2, 4, 6],
+        [0, 4, 8]
+
 
       ]
 
       subject.setGridSize(3)
-      subject.findWinningLines()
-      expect(subject.allWinningLines).to.eql(grid)
+      subject.findWinningLines(subject.grid)
+      expect(subject.allWinningLines).to.eql(winningLines)
     })
 
   });
