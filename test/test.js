@@ -123,4 +123,23 @@ describe("Board", function() {
       expect(subject.nextPlayer(grid)).to.eql("O");
     });
   });
+
+  describe('.setGridSize()', () => {
+    beforeEach(() => {
+      subject = new Board()
+    });
+
+    it('sets grid size by input', () => {
+
+      subject.setGridSize(3)
+      expect(subject.grid.length).to.eql(9)
+    });
+
+  });
+
+  describe('.findWinningLines()', () => {
+
+  });
+
+
 });
