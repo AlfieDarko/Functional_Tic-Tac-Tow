@@ -130,14 +130,34 @@ describe("Board", function() {
     });
 
     it('sets grid size by input', () => {
-
       subject.setGridSize(3)
       expect(subject.grid.length).to.eql(9)
     });
 
-  });
+  }); 
 
   describe('.findWinningLines()', () => {
+    beforeEach(() => {
+      subject = new Board()
+    });
+
+    it('creates an multidimensional array of possible winnings lines for 3x3 grid', () => {
+      grid = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+
+      ]
+
+      subject.setGridSize(3)
+      subject.findWinningLines()
+      expect(subject.allWinningLines).to.eql(grid)
+    })
 
   });
 
